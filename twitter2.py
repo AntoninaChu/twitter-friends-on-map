@@ -65,11 +65,6 @@ def create_map(acct):
     maps.add_child(fg_y)
     maps.add_child(folium.LayerControl())
     maps.save('MAP_NEW.html')
-    html_code = ""
-    with open("MAP_NEW.html","r") as map_file:
-        for line in map_file.readlines():
-            html_code += line
-    return html_code
     
 acct = input("Enter twitter account: ")
 create_map(acct)
